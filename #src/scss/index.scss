@@ -1,0 +1,58 @@
+@use 'variables';
+.main {
+	margin-right: 250px;
+	margin-left:0;
+}
+
+.slider {
+	position: relative;
+    &__image {
+        height: auto;
+        width: 100%;
+        position: absolute;
+        top:0;
+        left:0;
+        opacity: 0;
+        height: 100vh;
+        transition: opacity 0.5s;
+        object-fit: cover;
+    }
+    &__image:first-child {
+        opacity:1;
+    }
+    &__btns {
+        position: absolute;
+        left: 7px;
+        top: 10px;
+    }
+    
+    &__btns a  {
+        position: relative;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: #fff;
+        padding: 0.5em;
+        text-decoration: none;
+        z-index: 999;
+    }
+    &__btns a:hover {
+        background-color: rgba(23, 126, 137, 0.5);
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .slider {
+        margin: 0;
+        margin-left:0;
+        &__image {
+            height: auto;
+            width: 100%;
+            position: absolute;
+            top:0;
+            left:0;
+            opacity: 0;
+            transition: opacity 0.5s;
+        }
+    }
+    
+}
+

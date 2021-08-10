@@ -1,0 +1,63 @@
+@use 'variables';
+
+.arch-portfolio {
+	margin-right: 250px;
+    &__gallery {
+        padding-top: 50px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 25px;
+        & img {
+            justify-self: center;
+            transition: .3s;
+            &:hover {
+                transform: scale(0.97);
+                filter: brightness(30%);
+                transition: .3s;
+                cursor: pointer;
+            }
+        }
+    } 
+}
+
+.thumbnail {
+    height: 200px;
+	width: auto;
+}
+
+@media screen and (max-width: 1600px) {
+    .arch-portfolio {
+        &__gallery {
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-gap: 25px;
+        } 
+    }
+}
+
+@media screen and (max-width: 1220px) {
+    .arch-portfolio {
+        &__gallery {
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 25px;
+        } 
+    }
+    .thumbnail {
+        height: 250px;
+        width: auto;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .arch-portfolio {
+        margin-right: 0px;
+        &__gallery {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    .thumbnail {
+        max-width: 100%;
+        height: auto;
+        width: auto;
+    }
+}

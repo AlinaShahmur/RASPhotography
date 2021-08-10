@@ -1,0 +1,26 @@
+@use 'variables';
+
+footer {
+	position: fixed;
+	margin-right: 250px;
+	bottom:0;
+	width: calc(100vw - 250px);
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	color: #fff;
+	background-color: variables.$themeColor;
+	clear: both;
+}
+
+footer p {
+	margin-top:10px;
+	margin-bottom:10px;
+}
+
+@media screen and (max-width: 960px) {
+    footer {
+        width: 100vw;
+        margin-right: 0;
+    }
+}

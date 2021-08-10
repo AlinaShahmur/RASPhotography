@@ -1,0 +1,53 @@
+@use 'variables';
+
+.virtual-tours {
+    &__item {
+        justify-self: center;
+        margin-bottom: 3rem;
+        box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.3);
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: 5%;
+    }
+}
+
+.virtual-tours__wrapper {
+    display: grid;
+	grid-template-columns: repeat(3, auto);
+	padding-top: 104px;
+	margin: 0px 70px 70px 70px;
+	z-index: 1;
+
+}
+
+iframe {
+	width: 400px;
+	height: 300px;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	border-radius: 5%;
+}
+
+.eye {
+	display: block;
+	color: variables.$themeColor;
+	font-size: 1em;
+	text-decoration: none;
+}
+
+@media screen and (max-width: 1650px) {
+	.virtual-tours__wrapper {
+		grid-template-columns: repeat(2,auto);
+	}
+}
+
+@media screen and (max-width: 1200px) {
+	.virtual-tours__wrapper {
+		grid-template-columns: repeat(1,auto);
+		margin: 0px 0px 70px 0px;
+	}
+}
+
+@media screen and (max-width: 960px) {
+	.virtual-tours {
+		margin-right: 0;
+	}
+}

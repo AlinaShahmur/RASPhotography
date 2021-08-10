@@ -1,0 +1,27 @@
+@use 'variables';
+@use 'header';
+@use 'footer';
+@use 'index';
+@use 'contact';
+@use 'virtual-tours';
+@use 'architecture';
+@use 'real-estate';
+
+* {
+	margin:0;
+	padding: 0;
+}
+
+html, body {
+	height: 100%;
+}
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 400;
+	height: auto;
+	min-height: 100%;
+	position:relative;
+	margin: 0;
+	padding:0;
+}
