@@ -1,0 +1,120 @@
+@use 'variables';
+
+.order-form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    &__container {
+        margin-bottom: 50px;
+        padding: 2em;
+        text-align: center;
+        h2 {
+            margin-bottom: 1em;
+            color: variables.$themeColor;
+        }
+    }
+    &__form {
+        &_sending {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+    &__inp {
+        font-size: 15px;
+        border-radius: 10px;
+        outline: none;
+        border: 1px solid rgba(23, 126, 137, 0.5);
+        padding: 0.25em 0.5em 0.25em 0;
+        &:focus {
+            border: 1px solid  variables.$themeColor;
+            box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.3);
+        }
+        &._error {
+            box-shadow: 0 0 15px red;
+        }
+    }
+    &__item {
+        margin-bottom: 1em;
+    }
+    &__lbl {
+        font-size: 18px;
+    }
+    &__rooms {
+        text-align: right;
+        margin-right: 40px;
+    }
+}
+
+.checkbox-outdoor {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+    text-align: right;
+    margin: 25px 40px 25px 0;
+    &:hover input ~ &__checkmark{
+        background-color: #b3b3b3;
+    }
+    & input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+        &:checked ~ .checkbox-outdoor__checkmark {
+            background-color: variables.$themeColor
+        }
+        &:checked ~ .checkbox-outdoor__checkmark:after {
+            display: block
+        }
+    }
+    &__checkmark {
+        position: absolute;
+        top: 0;
+        right: 68px;
+        height: 25px;
+        width: 25px;
+        background-color:#ccc;
+        &:after {
+            content:'';
+            position: absolute;
+            display: none;
+            left: 9px;
+            top: 5px;
+            width: 5px;
+            height: 10px;
+            border: solid white;
+            border-width: 0 3px 3px 0;
+            transform: rotate(45deg);
+        }
+    }
+}
+
+
+
+
+.rooms {
+    &__item {
+        display: flex;
+        justify-content: space-between;
+        margin-left: 50px
+    }
+    &__btn {
+        width: 22px;
+        height: 22px;
+        border: none;
+        border-radius: 50%;
+        background-color: variables.$themeColor;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+}
+
+@media screen and (max-width: 960px) {
+    .order-form {
+        margin-right: 0;
+    }
+}

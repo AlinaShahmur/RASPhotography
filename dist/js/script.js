@@ -1,6 +1,8 @@
 //hamburger menu
 const toggler = document.querySelector('.toggler-label');
 const menu = document.querySelector('.sidebar__navbar');
+const dropdownArchitecture = document.querySelector('#dropdown-architecture')
+
 
 toggler.addEventListener('click', function() {
     menu.classList.toggle('show');
@@ -9,12 +11,15 @@ toggler.addEventListener('click', function() {
 
 let navlinks = document.querySelectorAll('.navbar__link');
 
-for (let i = 0; i < navlinks.length;i++) {
-    if (document.location.href.indexOf(navlinks[i].href) == 0) {
-        navlinks[i].classList.add('active');
-        if (i !== 0) {
-            navlinks[0].classList.remove('active');
-        }
-
+navlinks.forEach(link => {
+    if (document.location.pathname == '/') {
+        navlinks[0].classList.add('active');
     }
+    if (document.location.href.indexOf(link.href) == 0) {
+       link.classList.add('active')
+    }
+})
+
+if (document.location.pathname == '/architecture.html'||document.location.pathname == '/order-form.html') {
+    dropdownArchitecture.style.display = 'block'
 }

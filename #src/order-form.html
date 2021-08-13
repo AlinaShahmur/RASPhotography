@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/df3ae369fe.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/df3ae369fe.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.min.css">
+    <title>Roman Shahmurov - צילום אדריכלות ועיצ</title>
+</head>
+<body>
+    @@include('_header.html')
+
+<section class="main order-form">
+        <div class="order-form__container">
+            <img src="img/logo-order-form.jpg" alt="rasphoto__icon"> 
+            <h2>  טופס הזמנת חבילת צילום  </h2>
+            <form action="#" id="form" class="order-form__form" novalidate>
+                <div class="order-form__item">
+                    <label for="nameProject" class="order-form__lbl">הזמנת עבודה עבור</label> <br>
+                    <input class="order-form__inp _req" type="text" required id="nameProject" name="nameProject"/>
+                </div>
+                <div class="order-form__item">
+                    <label for="place" class="order-form__lbl">מיקום הפרויקט</label>  <br>
+                    <input id="place" class="order-form__inp _req" type="text"  required name="place"/>
+                </div >
+                <div class="order-form__item">
+                    <label for="size" class="order-form__lbl">גודל החלל</label>  <br>
+                    <input id="size" class="order-form__inp _req" type="number" required name="size" />
+                </div>
+                <div class="order-form__item">
+                    <label for="email" class="order-form__lbl">אימייל</label><br>
+                    <input id="email" class="order-form__inp _req _email" type="email" required name="email" />
+                </div>
+                <p  class="order-form__lbl">חדרים</p>
+                <div class="order-form__rooms">
+
+                    <div class="order-form__item rooms__item ">
+                        <label for = 'salon'>סלון</label>   
+                        <div aria-labelledby="salon">
+                            <button type="button" aria-label="increase-button" class="rooms__btn btn-plus">+</button>
+                            <span data-room = "salon" class="rooms-counter">0</span>
+                            <button type="button" aria-label="decrease-button" class="rooms__btn btn-minus" disabled>-</button>
+                        </div>
+                    </div>
+
+                    <div class="order-form__item rooms__item">
+    
+                            <label id = 'kitchen'>מטבח</label> 
+                            <div aria-labelledby="kitchen">
+                                <button type="button" aria-label="increase-button" class="rooms__btn btn-plus">+</button>
+                                <span data-room = "kitchen" class="rooms-counter">0</span>
+                                <button type="button" aria-label="decrease-button" class="rooms__btn btn-minus" disabled>-</button>
+                            </div>
+
+                    </div>
+
+                    <div class="order-form__item rooms__item">
+  
+                            <label id="shower">מקלחת</label> 
+                            <div aria-labelledby="shower">
+                                <button type="button" aria-label="increase-button" class="rooms__btn btn-plus">+</button>
+                                <span data-room = "shower" class="rooms-counter">0</span>
+                                <button type="button" aria-label="decrease-button" class="rooms__btn btn-minus" disabled>-</button>
+                            </div>
+
+                    </div>
+
+                    <div class="order-form__item rooms__item">
+                            <label id="toilet-guests">שרותי אורחים</label> 
+                            <div aria-labelledby="toilet-guests">
+                                <button type="button" aria-label="increase-button" class="rooms__btn btn-plus">+</button>
+                                <span data-room = "toilet-guests" class="rooms-counter">0</span>
+                                <button type="button" aria-label="decrease-button" class="rooms__btn btn-minus" disabled>-</button>
+                            </div>
+                    </div>
+
+
+                    <div class="order-form__item rooms__item">       
+                    
+                        <label id="bedroom-parents">יחידת הורים</label>
+                        <div aria-labelledby="bedroom-parents">
+                            <button type="button" aria-label="increase-button" class="rooms__btn btn-plus">+</button>
+                            <span data-room = "bedroom-parents" class="rooms-counter">0</span>
+                            <button type="button" aria-label="decrease-button" class="rooms__btn btn-minus" disabled>-</button>
+                        </div>
+                    </div>
+
+                    <div class="order-form__item rooms__item">                  
+                        <label id="bedroom">חדר שינה </label>
+                        <div aria-labelledby="balcony">
+                            <button type="button" aria-label="increase-button" class="rooms__btn btn-plus">+</button>
+                            <span data-room = "bedroom" class="rooms-counter">0</span>
+                            <button type="button" aria-label="decrease-button" class="rooms__btn btn-minus" disabled>-</button>
+                        </div>
+                    </div>
+    
+                    <div class="order-form__item rooms__item">
+                        <label id="balcony">מרפסת</label>
+                        <div aria-labelledby="balcony">
+                            <button type="button" aria-label="increase-button" class="rooms__btn btn-plus">+</button>
+                            <span data-room = "balcony" class="rooms-counter">0</span>
+                            <button type="button" aria-label="decrease-button" class="rooms__btn btn-minus" disabled>-</button>
+                        </div>
+                    </div>
+                </div>
+               
+        
+                <label for="outdoor" class="order-form__item checkbox-outdoor">צילום חוץ
+                    <input id="outdoor" name = 'outdoor' value="צילומי חוץ" type="checkbox"/>
+                    <span class="checkbox-outdoor__checkmark"></span>
+                </label>
+
+
+                <div class="order-form__item">
+                    <label class="order-form__lbl" for="comments">הערות כלליות </label> <br>
+                    <textarea cols = '25' rows = '5'  class="order-form__inp" id="comments" name="comments"></textarea> <br>
+                </div>
+        
+                <button class="order-form__btn btn btn-turquoise" type="submit">שליחה</button>
+            </form>
+        </div>
+       
+
+</section>
+
+    @@include('_footer.html')
+    <script src="js/orderForm.min.js"></script>
+</body>
+</html>

@@ -26,17 +26,24 @@
         top: 10px;
     }
     
-    &__btns a  {
+    &__btns button  {
         position: relative;
         background-color: rgba(0, 0, 0, 0.5);
         color: #fff;
         padding: 0.5em;
         text-decoration: none;
         z-index: 999;
+        outline: none;
+        border: none;
     }
-    &__btns a:hover {
+    &__btns button:hover {
         background-color: rgba(23, 126, 137, 0.5);
+        cursor: pointer;
     }
+}
+
+.fas.inactive {
+    display: none;
 }
 
 @media screen and (max-width: 960px) {

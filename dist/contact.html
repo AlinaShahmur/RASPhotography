@@ -2,11 +2,10 @@
 <html dir="rtl" lang="he">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/df3ae369fe.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/df3ae369fe.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.min.css">
     <title>Roman Shahmurov - צילום אדריכלות ועיצ</title>
 </head>
@@ -14,21 +13,26 @@
     
     <nav class="sidebar">
         <div class="sidebar__logo">
-            <img src="img/rasLogo.png" alt="">
+            <img src="img/rasLogo.png" alt="rasphoto__icon">
             <input type="checkbox" id="toggler" class="toggler-input">
             <label for="toggler" class="toggler-label"></label>
         </div>
 		<ul class="sidebar__navbar navbar">
-			<li class="navbar__item"><a href="index.html" class="navbar__link active">דף הבית</a></li>
-			<li class="navbar__item"><a href="architecture.html" class="navbar__link">צילום אדריכלות</a></li>
+			<li class="navbar__item"><a href="index.html" class="navbar__link">דף הבית</a></li>
+			<li class="navbar__item navbar__dropdown" data-toggle="dropdown"><a href="#" class="navbar__link">צילום אדריכלות  <i class="fas fa-caret-down"></i></a>
+                <ul class="navbar__dropdown-content" id="dropdown-architecture">
+                    <li class="navbar__item"><a class="navbar__link dropdown-link" href="architecture.html" >גלריה </a></li> 
+                    <li class="navbar__item"><a class="navbar__link dropdown-link" href="order-form.html"> טופס הזמנת צילום</a></li>
+                 </ul>
+            </li>
 			<li class="navbar__item"><a href="virtual-tours.html" class="navbar__link">סיור וירטואלי</a></li>
             <li class="navbar__item"><a href="real-estate.html" class="navbar__link">צילום נכסים</a></li>
 			<li class="navbar__item"><a href="contact.html" class="navbar__link">יצירת קשר</a></li>
 		</ul>
         <ul class="sidebar__contacts-list contacts-list">
-            <li class="contacts-list__item"><a href="https://www.instagram.com/roman2907/" target="_blank"><i id = "insta" class="icontact fab fa-instagram"></i></a></li>
-            <li class="contacts-list__item"><a href="https://api.whatsapp.com/send?phone=972515290788" target="_blank"><i id="whatsApp" class="icontact fab fa-whatsapp"></i></a></li>
-            <li class="contacts-list__item"><a href="https://www.facebook.com/roman.shahmurov" target="_blank"><i id="facebook" class="icontact fab fa-facebook-square"></i></a></li>
+            <li class="contacts-list__item"><a href="https://www.instagram.com/roman2907/" target="_blank" aria-label = "link_to_instagram"><i id = "insta" class="icontact fab fa-instagram"></i></a></li>
+            <li class="contacts-list__item"><a href="https://api.whatsapp.com/send?phone=972515290788" target="_blank" aria-label = "link_to_whatsapp"><i id="whatsApp" class="icontact fab fa-whatsapp"></i></a></li>
+            <li class="contacts-list__item"><a href="https://www.facebook.com/roman.shahmurov" target="_blank" aria-label = "link_to_facebook"><i id="facebook" class="icontact fab fa-facebook-square"></i></a></li>
         </ul>
 	</nav>
 
@@ -41,9 +45,9 @@
                 <h2 class="contact__title">יצירת קשר</h2>
 
                 <ul class="social-networks__list">
-                    <li><a class="social-networks__link" href="https://www.instagram.com/roman2907/"><i id = "insta" class="icontact fab fa-instagram"></i> Instagram</a></li>
-                    <li><a class="social-networks__link"href="https://api.whatsapp.com/send?phone=972515290788" target="_blank"><i id="whatsApp" class="icontact fab fa-whatsapp"></i> 0515290788</a></li>
-                    <li><a class="social-networks__link"href="https://www.facebook.com/roman.shahmurov" target="_blank"><i id="facebook" class="icontact fab fa-facebook-square"></i> Facebook</a></li>
+                    <li><a class="social-networks__link" href="https://www.instagram.com/roman2907/" aria-label = "link_to_instagram"><i class="icontact fab fa-instagram" ></i> Instagram</a></li>
+                    <li><a class="social-networks__link"href="https://api.whatsapp.com/send?phone=972515290788" target="_blank" aria-label = "link_to_whatsapp"><i class="icontact fab fa-whatsapp"></i> 0515290788</a></li>
+                    <li><a class="social-networks__link"href="https://www.facebook.com/roman.shahmurov" target="_blank" aria-label = "link_to_facebook"><i class="icontact fab fa-facebook-square"></i> Facebook</a></li>
                 </ul>
 
             </div>
@@ -51,14 +55,14 @@
                 <h2 class="contact__title">או מלא/י את הטופס</h2>
                 <form action="#" class="contact-form__form" id="form">
                     <label for="name">שם</label> <br><br>
-                    <input class="contact-form__inp _req" type="text" name = "name"> <br><br>
+                    <input class="contact-form__inp _req" type="text" id="name" name = "name"> <br><br>
                     <label for="email">אימייל</label> <br><br>
-                    <input class="contact-form__inp _req _email" type="email" name="email"> <br><br>
+                    <input class="contact-form__inp _req _email" id="email" type="email" name="email"> <br><br>
                     <label for="phone">נייד</label> <br><br>
-                    <input class="contact-form__inp _req" type="tel" name="phone"> <br><br>
+                    <input class="contact-form__inp _req" type="tel" id="phone" name="phone"> <br><br>
                     <label for="message">הערות</label> <br><br>
                     <textarea class="contact-form__inp _req" name="message" id="message" cols="30" rows="10"></textarea> <br><br>
-                    <button class="contact-form__inp btn btn_turquoise" type="submit">שלח/י</button>
+                    <button class="contact-form__inp btn btn-turquoise" type="submit">שלח/י</button>
                 </form>
             </div>
         </div>

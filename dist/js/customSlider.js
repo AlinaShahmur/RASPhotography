@@ -23,6 +23,7 @@ function customBtn(content, id, clickHandler,parent = document.body) {
         this.parent.appendChild(element)
         element.classList.add('btn-slider');
         element.setAttribute('id', this.id)
+        element.setAttribute('aria-label', this.id)
         element.innerHTML = this.content;
         element.addEventListener('click', this.clickHandler)
         return element
@@ -39,6 +40,7 @@ let btnClose = new customBtn('<i class="fas fa-times"></i>','btn-close',closeCli
 Array.from(images).forEach(elem => {
     let image = document.createElement('img')
     image.setAttribute('src',elem.src)
+    image.setAttribute('alt','slider-image')
     slider.appendChild(image);
 })
 

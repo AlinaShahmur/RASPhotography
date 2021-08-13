@@ -91,24 +91,6 @@
 
 }
 
-.btn {
-    padding: 0.15em 1.5em;
-	color: #fff;
-	transition: opacity 0.5s;
-	font-size: 20px;
-	border-radius: 10px;
-	outline: none;
-	opacity: 100%;
-}
-
-.btn:hover {
-	opacity: 70%;
-	cursor: pointer;
-}
-
-.btn_turquoise {
-	background-color: variables.$themeColor;
-}
 
 @media screen and (max-width: 1200px) {
     .forms {

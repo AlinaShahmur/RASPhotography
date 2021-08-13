@@ -15,7 +15,7 @@ let path = {
     cssPopup: sourceFolder + '/scss/customSlider.css',
     js: sourceFolder + "/js/*.js",
     img: sourceFolder + "/img/**/*.{jpg,jpeg,png,svg,gif,ico,webp}",
-    php: sourceFolder + "/sendmail.php",
+    php: sourceFolder + "/*.php",
     phpMailer: sourceFolder + "/PHPMailer/**/*",
   },
   watch: {
@@ -23,7 +23,7 @@ let path = {
     css: sourceFolder + "/scss/**/*.scss",
     js: sourceFolder + "/js/**/*.js",
     img: sourceFolder + "/img/**/*.{jpg,png,svg,gif,ico,webp}",
-    php: sourceFolder + "/sendmail.php",
+    php: sourceFolder + "/*.php",
     phpMailer: sourceFolder + "/PHPMailer/**/*",
   },
   clean: "./" + projectFolder + "/"

@@ -6,6 +6,7 @@
 @use 'virtual-tours';
 @use 'architecture';
 @use 'real-estate';
+@use 'order-form';
 
 * {
 	margin:0;
@@ -24,4 +25,28 @@ body {
 	position:relative;
 	margin: 0;
 	padding:0;
+}
+
+ul li {
+	list-style-type: none;
+}
+
+.btn {
+    padding: 0.15em 1.5em;
+	color: #fff;
+	transition: opacity 0.5s;
+	font-size: 20px;
+	border-radius: 10px;
+	outline: none;
+	opacity: 100%;
+	border: none;
+}
+
+.btn:hover {
+	opacity: 70%;
+	cursor: pointer;
+}
+
+.btn-turquoise {
+	background-color: variables.$themeColor;
 }
