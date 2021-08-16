@@ -454,12 +454,33 @@ iframe {
           box-shadow: 0 0 15px red;
 }
 
+.order-form__inp::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.order-form__inp::-moz-placeholder {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.order-form__inp:-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.order-form__inp::-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.order-form__inp::placeholder {
+  color: rgba(0, 0, 0, 0.3);
+}
+
 .order-form__item {
   margin-bottom: 1em;
 }
 
 .order-form__lbl {
   font-size: 18px;
+  margin-bottom: 30px;
 }
 
 .order-form__rooms {

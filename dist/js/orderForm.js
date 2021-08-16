@@ -7,7 +7,6 @@ let rooms = {}
 for (let i = 0; i < counters.length; i++){
     rooms[counters[i].getAttribute('data-room')] = 0
 }
-console.log(rooms)
 
 //counters
 for (let i = 0; i < counters.length; i++) {
@@ -48,12 +47,6 @@ window.onload = function() {
                 formData.append(counters[i].getAttribute('data-room'), rooms[counters[i].getAttribute('data-room')])
             }
         }
-        console.log(formData.get('salon'))
-        for (let value of formData.values()) {
-            console.log(value)
-        }
-        console.log(formData.get('outdoor'))
-
         if (error === 0) {
             form.classList.add('__sending')
             let response = await fetch('sendOrderForm.php', {

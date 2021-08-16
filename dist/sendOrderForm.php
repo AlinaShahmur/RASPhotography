@@ -14,29 +14,33 @@
     $mail->addAddress('ashaturnaya@gmail.com'); //the letter to
     $mail->Subject = 'שליחת תופס הזמנת צילום';
 
-    $body = '<h1>שלום רב</h1>';
+    $body = '<body dir ="rtl"><h1>שלום רב</h1>';
 
+    if (!empty($_POST['name'])) {
+        $body.='<p><strong> שם המזמין :</strong> '.$_POST['name'].'</p>';
+    }
+    if (!empty($_POST['phone'])) {
+        $body.='<p><strong>טלפון :</strong> '.$_POST['phone'].'</p>';
+    }
     if (!empty($_POST['nameProject'])) {
-        $body.='<p><strong>:הזמנת עבודה עבור</strong> '.$_POST['nameProject'].'</p>';
+        $body.='<p><strong>שם הפרוייקט :</strong> '.$_POST['nameProject'].'</p>';
     }
     if (!empty($_POST['place'])) {
-        $body.='<p><strong>:מיקום הפרויקט</strong> '.$_POST['place'].'</p>';
+        $body.='<p><strong>מיקום הפרויקט :</strong> '.$_POST['place'].'</p>';
     }
     if (!empty($_POST['size'])) {
-        $body.='<p><strong>:גודל החלל</strong> '.$_POST['size'].'</p>';
+        $body.='<p><strong> גודל החלל:</strong> '.$_POST['size'].'</p>';
     }
     if (!empty($_POST['email'])) {
-         $body.='<p><strong> :אימייל</strong> '.$_POST['email'].'</p>';
+         $body.='<p><strong> אימייל :</strong> '.$_POST['email'].'</p>';
+    }
+    if (!empty($_POST['outdoor'])) {
+        $body.='<p><strong> כולל צילומי חוץ</strong></p>';
     }
     if (!empty($_POST['comments'])) {
-        $body.='<p><strong>הערות/strong> '.$_POST['comments'].'</p>';
+        $body.='<p><strong> הערות :</strong> '.$_POST['comments'].'</p>';
     }
-
-    if (!empty($_POST['outdoors'])) {
-        $body.='<p><strong>צילומי חוץ/strong></p>';
-    }
-
-    $rooms = '<ul>';
+    $rooms = '<p>חללים לצילום:</p><ul>';
 
     if ($_POST['salon'] != 0) {
         $rooms.='<li>סלון - '.$_POST['salon'].'</li>';
@@ -60,7 +64,7 @@
         $rooms.='<li>מרפסת - '.$_POST['balcony'].'</li>';
     }
 
-    $rooms.='</ul>';
+    $rooms.='</ul></body>';
     $body.= $rooms;
 
     $mail->Body = $body;

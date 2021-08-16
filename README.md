@@ -14,4 +14,4 @@ Gulp helped me to automate workflow and optimize project(js-minifier, css-minifi
 SASS allowed me to write more structured an optimized css-code.
 
 
-The web-site is on the hoisting now, URL: http://rasphoto.co.il/
+The web-site is on the hosting now, URL: http://rasphoto.co.il/

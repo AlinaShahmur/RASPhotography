@@ -18,23 +18,37 @@
             <img src="img/logo-order-form.jpg" alt="rasphoto__icon"> 
             <h2>  טופס הזמנת חבילת צילום  </h2>
             <form action="#" id="form" class="order-form__form" novalidate>
+
                 <div class="order-form__item">
-                    <label for="nameProject" class="order-form__lbl">הזמנת עבודה עבור</label> <br>
-                    <input class="order-form__inp _req" type="text" required id="nameProject" name="nameProject"/>
+                    <label for="name" class="order-form__lbl">שם המזמין</label><br>
+                    <input id="name" class="order-form__inp _req" type="text" required name="name" />
                 </div>
-                <div class="order-form__item">
-                    <label for="place" class="order-form__lbl">מיקום הפרויקט</label>  <br>
-                    <input id="place" class="order-form__inp _req" type="text"  required name="place"/>
-                </div >
-                <div class="order-form__item">
-                    <label for="size" class="order-form__lbl">גודל החלל</label>  <br>
-                    <input id="size" class="order-form__inp _req" type="number" required name="size" />
-                </div>
+
                 <div class="order-form__item">
                     <label for="email" class="order-form__lbl">אימייל</label><br>
                     <input id="email" class="order-form__inp _req _email" type="email" required name="email" />
                 </div>
-                <p  class="order-form__lbl">חדרים</p>
+
+                <div class="order-form__item">
+                    <label for="phone" class="order-form__lbl">טלפון</label><br>
+                    <input id="phone" class="order-form__inp _req" type="phone" required name="phone" />
+                </div>
+                
+
+                <div class="order-form__item">
+                    <label for="nameProject" class="order-form__lbl">שם הפרוייקט</label> <br>
+                    <input class="order-form__inp _req" placeholder="לדוגמה: וילה מעוצבת " type="text" required id="nameProject" name="nameProject"/>
+                </div>
+                <div class="order-form__item">
+                    <label for="place" class="order-form__lbl">מיקום הפרויקט</label>  <br>
+                    <input id="place" class="order-form__inp _req" placeholder = 'שם העיר' type="text"  required name="place"/>
+                </div >
+                <div class="order-form__item">
+                    <label for="size" class="order-form__lbl">גודל החלל</label>  <br>
+                    <input id="size" class="order-form__inp _req" placeholder="במטר מרובע" type="number" required name="size" />
+                </div>
+
+                <p  class="order-form__lbl">חללים לצילום</p>
                 <div class="order-form__rooms">
 
                     <div class="order-form__item rooms__item ">
