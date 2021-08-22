@@ -10,7 +10,6 @@
         padding: 2em;
         text-align: center;
         h2 {
-            margin-bottom: 1em;
             color: variables.$themeColor;
         }
     }
@@ -47,6 +46,11 @@
     &__rooms {
         text-align: right;
         margin-right: 40px;
+    }
+    &__small-text {
+        font-size: 14px;
+        color:rgba(0, 0, 0, 0.5);
+        margin-bottom: 1.5em;
     }
 }
 
@@ -112,6 +116,7 @@
         background-color: variables.$themeColor;
         &:hover {
             cursor: pointer;
+            opacity: 0.8
         }
     }
 

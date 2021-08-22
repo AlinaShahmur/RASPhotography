@@ -52,17 +52,19 @@
   font-weight: 500;
   display: block;
   border-right: 3px solid transparent;
+  font-weight: 700;
 }
 
 .navbar__link.dropdown-link {
   font-size: 16px;
+  font-weight: 300;
 }
 
 .navbar__dropdown-content {
   display: none;
 }
 
-.navbar__dropdown:hover .navbar__dropdown-content {
+.navbar__dropdown-content.opened {
   display: block;
 }
 
@@ -426,7 +428,6 @@ iframe {
 }
 
 .order-form__container h2 {
-  margin-bottom: 1em;
   color: #177e89;
 }
 
@@ -486,6 +487,12 @@ iframe {
 .order-form__rooms {
   text-align: right;
   margin-right: 40px;
+}
+
+.order-form__small-text {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.5);
+  margin-bottom: 1.5em;
 }
 
 .checkbox-outdoor {
@@ -564,6 +571,7 @@ iframe {
 
 .rooms__btn:hover {
   cursor: pointer;
+  opacity: 0.8;
 }
 
 * {
@@ -610,6 +618,10 @@ ul li {
 
 .btn-turquoise {
   background-color: #177e89;
+}
+
+.asterisk {
+  color: red;
 }
 
 @media screen and (min-width: 960px) {

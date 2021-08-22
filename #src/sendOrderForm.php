@@ -10,8 +10,8 @@
     $mail->setLanguage('he', 'PHPMailer/language/'); //language
     $mail->IsHTML(true); //possibility to insert HTML tags in the mail
 
-    $mail->setFrom('ashaturnaya@gmail.com', 'Alina Shahmurov'); //the letter from
-    $mail->addAddress('ashaturnaya@gmail.com'); //the letter to
+    $mail->setFrom('ras.photography@mail.com', 'Roman Shahmurov'); //the letter from
+    $mail->addAddress('ras.photography@mail.com'); //the letter to
     $mail->Subject = 'שליחת תופס הזמנת צילום';
 
     $body = '<body dir ="rtl"><h1>שלום רב</h1>';
@@ -33,6 +33,7 @@
     }
     if (!empty($_POST['email'])) {
          $body.='<p><strong> אימייל :</strong> '.$_POST['email'].'</p>';
+         $mail->addAddress($_POST['email']);
     }
     if (!empty($_POST['outdoor'])) {
         $body.='<p><strong> כולל צילומי חוץ</strong></p>';

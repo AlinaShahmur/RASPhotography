@@ -57,6 +57,9 @@ window.onload = function() {
                 let result = await response.json()
                 alert(result.message)
                 form.reset()
+                for (let i = 0; i< counters.length; i++) {
+                    counters.innerHTML = '0'
+                }
                 form.classList.remove('_sending');
             } else {
                 alert('Error...');

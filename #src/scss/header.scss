@@ -41,14 +41,16 @@
         font-weight: 500;
         display: block;
         border-right: 3px solid transparent;
+        font-weight: 700;
         &.dropdown-link  {
             font-size: 16px;
+            font-weight: 300;
         }
     }
     &__dropdown-content {
         display: none;
     }
-    &__dropdown:hover &__dropdown-content {
+    &__dropdown-content.opened {
         display: block;
     }
 }
