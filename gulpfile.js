@@ -34,15 +34,13 @@ let {src, dest} = require('gulp'),
           browsersync = require('browser-sync'),
           fileinclude = require('gulp-file-include'),
           del = require('del'),
-          scss = require('gulp-sass'),
+          scss = require('gulp-sass')(require("sass")),
           autoprefixer = require('gulp-autoprefixer'),
           clean_css = require('gulp-clean-css'),
           rename = require('gulp-rename'),
           uglify = require('gulp-uglify-es').default,
           imagemin = require('gulp-imagemin'),
           group_media = require('gulp-group-css-media-queries');
-
-scss.compiler = require('sass');
 
 function browserSync() {
     browsersync.init({
