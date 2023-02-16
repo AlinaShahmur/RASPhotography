@@ -25,6 +25,60 @@
 	width: auto;
 }
 
+.architecture {
+    &__categories {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    &__btn-watch {
+        opacity: 0;
+        padding: 1rem;
+        background-color: variables.$themeColor;
+        border-radius: 10px;
+        transition: 0.2s ease-in;
+        margin: 1rem;
+    }
+}
+.arch-categories {
+    &__item {
+        display: flex;
+        border-radius: 10px;
+        align-items: center;
+        margin:1rem;
+        height: 100%;
+        background-color: #e6e6e6;
+        & img {
+            height: 300px;
+            width: auto;
+            border-radius: 10px;
+        }
+        & a {
+            color: white;
+        }
+        &:hover .architecture__btn-watch {
+            opacity: 1;
+        }
+        &:hover {
+            filter: brightness(60%);
+        }
+    }
+    &__img {
+        position: relative;
+    }
+    &__text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color: variables.$themeColor;
+        align-items: center;
+        width: 300px;
+        border-radius: 10px;
+        height:100%;
+    }
+}
+
 @media screen and (max-width: 1600px) {
     .arch-portfolio {
         &__gallery {
@@ -45,6 +99,14 @@
         height: 250px;
         width: auto;
     }
+    .arch-categories {
+        &__item {
+            & img {
+                height: 250px;
+                width: auto;
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 960px) {
@@ -60,4 +122,33 @@
         height: auto;
         width: auto;
     }
+
+    .arch-categories {
+        &__item {
+            flex-direction: column;
+            margin: 1.5rem 0rem;
+            & img {
+                height: auto;
+                width: auto;
+            }
+        }
+        &__text {
+            flex-direction: row;
+            justify-content: space-between;
+            width: 100%;
+        }
+    }
+
+    .architecture {
+        &__categories {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+        }
+        &__btn-watch {
+            opacity: 1;
+        }
+    }
+
 }

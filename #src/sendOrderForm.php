@@ -12,7 +12,7 @@
 
     $mail->setFrom('ras.photography@mail.com', 'Roman Shahmurov'); //the letter from
     $mail->addAddress('ras.photography@mail.com'); //the letter to
-    $mail->Subject = 'שליחת תופס הזמנת צילום';
+    $mail->Subject = 'שליחת טופס הזמנת צילום';
 
     $body = '<body dir ="rtl"><h1>שלום רב</h1>';
 

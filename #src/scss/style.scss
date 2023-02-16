@@ -13,8 +13,12 @@
 	padding: 0;
 }
 
+
 html, body {
 	height: 100%;
+}
+a {
+	text-decoration: none;
 }
 
 body {
@@ -53,4 +57,18 @@ ul li {
 
 .asterisk {
 	color: red;
+}
+
+.main-header {
+	font-size: 72px;
+	text-align: center;
+	font-weight: 400;
+	margin-bottom: 3rem;
+	color: variables.$themeColor;
+}
+
+@media screen and (max-width: 960px) {
+	.main {
+		margin-right: 0;
+	}
 }
