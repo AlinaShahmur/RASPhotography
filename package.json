@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "build": "gulp build",
-    "start": "gulp prod && node app.js"
+    "start": "node app.js"
   },
   "keywords": [],
   "author": "",
