@@ -152,6 +152,8 @@ function clean() {
 let build = gulp.series(clean,gulp.parallel(html,css,cssPopup,js,php,phpMailer,images))
 let watch = gulp.parallel(build, watchFiles, browserSync);
 
+let prod = gulp.parallel(gulp.parallel(html,css,cssPopup,js,php,phpMailer,images), browserSync)
+
 exports.phpMailer = phpMailer;
 exports.php = php;
 exports.cssPopup = cssPopup;
@@ -161,4 +163,5 @@ exports.css = css;
 exports.html = html;
 exports.build = build;
 exports.watch = watch;
+exports.prod = prod;
 exports.default = watch;
