@@ -2,6 +2,7 @@
   "name": "RASPhotography",
   "version": "1.0.0",
   "description": "",
+  "main":"app.js",
   "scripts": {
     "dev": "gulp build && gulp default",
     "start": "set NODE_ENV=production&& node app.js"
